@@ -1,0 +1,53 @@
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import materialize.css-->
+      <script language="javascript" type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+      <link type="text/css" rel="stylesheet" href="style.css"  media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+      <nav>
+        <div class="nav-wrapper black">
+          <a href="/" class="brand-logo center thin">DAP Projects</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="http://github.com/askprateek">Github</a></li>
+            <li><a href="http://fb.com/askpk123">Facebook</a></li>
+            <li><a href="http://twitter.com/AskPK123">Twitter</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row" id="grid">
+        </div>
+      </div>
+      <script>
+      $(document).ready(function(){
+        $.ajax({
+          url: "/",
+          success: function(data){
+            var folder;
+            $(data).find("td > a").each(function(){
+              folder=$(this).attr("href");
+              console.log(folder);
+              folder=$(this).attr("href");
+              if (folder.indexOf('.')==-1)
+                {
+                $("#grid").append('<div class=\"col s12 m6 l4 center-align\"><div class="dap valign-wrapper"><a class=\"valign\"href=\"'+folder+'\"><h4 class=\"thin\">'+decodeURI(folder).slice(0,-1).toUpperCase()+'</h4></a></div></div>');
+                }
+            });
+            }
+          });
+
+    });
+    </script>
+
+
+
+      <!--Import jQuery before materialize.js-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+    </body>
+  </html>

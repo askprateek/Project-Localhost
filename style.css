@@ -1,0 +1,31 @@
+html{
+  min-height: 100%;
+}
+nav{
+  margin-bottom: 10px;
+}
+body{
+  background:
+		url(/grain.png),
+		linear-gradient(top, #D7D3C8 0%,#F6F4EC 100%);
+}
+
+.row .col{
+  height:125px;
+  margin-bottom: 15px;
+  }
+.dap{
+  margin: auto;
+  min-width: 99%;
+  min-height: 99%;
+  background: #f5f5f5;
+}
+.dap:hover{
+  background: #039BE5;
+}
+.dap:hover h4{
+  color:#f5f5f5;
+}
+.valign-wrapper .valign{
+  margin:auto;
+}
