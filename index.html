@@ -36,7 +36,7 @@
               folder=$(this).attr("href");
               if (folder.indexOf('.')==-1)
                 {
-                $("#grid").append('<div class=\"col s12 m6 l4 center-align\"><div class="dap valign-wrapper"><a class=\"valign\"href=\"'+folder+'\"><h4 class=\"thin\">'+decodeURI(folder).slice(0,-1).toUpperCase()+'</h4></a></div></div>');
+                $("#grid").append('<div class=\"col s12 m6 l4 center-align\"><div class="dap valign-wrapper"><a class=\"valign\"href=\"/'+folder+'\"><h4 class=\"thin\">'+decodeURI(folder).slice(0,-1).toUpperCase()+'</h4></a></div></div>');
                 }
             });
             }
