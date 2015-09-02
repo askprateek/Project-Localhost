@@ -6,8 +6,20 @@ nav{
 }
 body{
   background:
-		url(/grain.png),
-		linear-gradient(top, #D7D3C8 0%,#F6F4EC 100%);
+		url(grain.png),
+		-moz-linear-gradient(top, #D7D3C8 0%,#F6F4EC 100%);
+    background:
+      url(grain.png),
+      -webkit-linear-gradient(top, #D7D3C8 0%,#F6F4EC 100%);
+      background:
+        url(grain.png),
+        -linear-gradient(top, #D7D3C8 0%,#F6F4EC 100%);
+        background:
+          url(grain.png),
+          -ms-linear-gradient(top, #D7D3C8 0%,#F6F4EC 100%);
+          background:
+            url(grain.png),
+            -o-linear-gradient(top, #D7D3C8 0%,#F6F4EC 100%);
 }
 
 .row .col{
@@ -22,6 +34,7 @@ body{
 }
 .dap:hover{
   background: #039BE5;
+  box-shadow: 0px 0px 5px #039be5;
 }
 .dap:hover h4{
   color:#f5f5f5;
